@@ -1,0 +1,36 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0 40px;
+}
+.table-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 4fr 3fr 20fr;
+  text-align: center;
+}
+
+.header-row {
+  font-weight: bold;
+}
+
+.row-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border: 1px solid gray;
+}
+
+.approach {
+  justify-content: flex-start;
+}
+
+.progress-row {
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr 3fr 3fr;
+}
