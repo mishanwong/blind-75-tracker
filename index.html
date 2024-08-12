@@ -23,6 +23,7 @@
     </p>
     <p>Date started: 8/12/2024</p>
     <p>Target completion date: 11/25/2024</p>
+    <p>Current count: 4 out of 76</p>
     <div class="table-container">
       <div class="row header-row">
         <div class="row-item">#</div>
@@ -46,8 +47,25 @@
             >Best Time to Buy and Sell Stock</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/11/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <li>
+              Keep track of 2 variables - minimum price seen so far, and max
+              profit so far.
+            </li>
+            <li>
+              Iterate through the list of prices, if a lower price is seen,
+              update minimum price
+            </li>
+            <li>
+              At each price, calculate the profit with this price, and update
+              the max profit if the profit is higher than max profit.
+            </li>
+            <li>Return max profit</li>
+            <li>O(n) time & O(1) space</li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">3</div>
@@ -56,8 +74,19 @@
             >Contains Duplicate</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/11/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <li>Initialize a set.</li>
+            <li>
+              Iterate through the numbers. Check if the number is in the set. If
+              it is, return true.
+            </li>
+            <li>If not, add the number into the set.</li>
+            <li>In the end, return false, as there isn't any duplicates.</li>
+            <li>O(n) time and O(n) space</li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">4</div>
@@ -542,8 +571,27 @@
             >Valid Anagram</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/11/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <li>
+              Use a two pointers, i and j. i pointing at the beginning of the
+              string, j pointing at the end.
+            </li>
+            <li>
+              Check if the characters at the two pointers are alphanumeric, if
+              not, then skip that character.
+            </li>
+            <li>
+              Check if the two characters are the same. If they are not, then
+              invalid palindrome.
+            </li>
+            <li>
+              When the two pointers crossed, it means we have examined all
+              characters, and it is a valid palindrome.
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">54</div>
@@ -562,8 +610,33 @@
             >Valid Parentheses</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/11/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <li>Initialize a stack data structure.</li>
+            <li>
+              Create a dictionary that stores pairs of brackets. Key as the
+              closing bracket, and the value is the corresponding opening
+              bracket.
+            </li>
+            <li>Loop over each character in the string.</li>
+            <li>
+              If the character is an opening bracket, push it onto the stack.
+            </li>
+            <li>
+              Else, if the character is a closing bracket, check if the stack is
+              empty. If the stack is empty, then there isn't a corresponding
+              opening bracket, and the string is invalid. If the stack is not
+              empty, pop the topmost item in the stack, and check if they match.
+              If they don't, then return false.
+            </li>
+            <li>
+              After finish looping through every character in the string, if the
+              stack is not empty, then it is invalid.
+            </li>
+            <li>Else, return true. The string is valid parenthesis.</li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">56</div>

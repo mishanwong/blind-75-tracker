@@ -27,10 +27,15 @@ body {
 }
 
 .approach {
+  display: flex;
   justify-content: flex-start;
 }
 
 .progress-row {
   display: grid;
   grid-template-columns: 3fr 3fr 3fr 3fr 3fr;
+}
+
+ul {
+  text-align: left;
 }
