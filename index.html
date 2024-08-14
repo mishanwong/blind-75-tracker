@@ -23,7 +23,7 @@
     </p>
     <p>Date started: 8/12/2024</p>
     <p>Target completion date: 11/25/2024</p>
-    <p>Current count: 4 out of 76</p>
+    <p>Current count: 12 out of 76 (16%)</p>
     <div class="table-container">
       <div class="row header-row">
         <div class="row-item">#</div>
@@ -95,28 +95,74 @@
             >Product of Array Except Self</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/13/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <p><strong>Prefix and suffix product</strong></p>
+            <li>Initialize 2 arrays of len(nums) and fill with 1'</li>
+            <li>
+              Store all products of all numbers before nums[i] and products of
+              all numbers after nums[i] in the 2 arrays above respectively
+            </li>
+            <li>
+              Multiply each element in the two arrays together and return the
+              resulting array.
+            </li>
+            <li>O(n) time and O(n) space.</li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">5</div>
         <div class="row-item">
+          &#11088;
           <a href="https://leetcode.com/problems/maximum-subarray/"
             >Maximum Subarray</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/13/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <p><strong>Dynamic programming - tabulation</strong></p>
+            <li>
+              Iterate through the list of numbers, at each number, decide
+              whether to extend the subarray, or start the subarray from that
+              number.
+            </li>
+            <li>
+              If starting a new subarray at that number has a greater value than
+              extending the subarray, choose starting a new subarray.
+            </li>
+            <li>
+              At each iteration, keep track of the max sum so far. Return the
+              max sum.
+            </li>
+            <li>O(n) time and O(1) space.</li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">6</div>
         <div class="row-item">
+          &#11088;
           <a href="https://leetcode.com/problems/maximum-product-subarray/"
             >Maximum Product Subarray</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/13/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <p><strong>Dynamic programming - tabulation</strong></p>
+
+            <li>Similar to Maximum Subarray problem.</li>
+            <li>
+              Need to keep track of min_sum and max_sum so far, because number
+              could be negative, and need to multiply negative number with the
+              min_sum so far to get maximum sum.
+            </li>
+            <li>O(n) time & O(1) space</li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">7</div>
@@ -571,24 +617,12 @@
             >Valid Anagram</a
           >
         </div>
-        <div class="row-item">8/11/2024</div>
+        <div class="row-item">8/12/2024</div>
         <div class="row-item approach">
           <ul>
             <li>
-              Use a two pointers, i and j. i pointing at the beginning of the
-              string, j pointing at the end.
-            </li>
-            <li>
-              Check if the characters at the two pointers are alphanumeric, if
-              not, then skip that character.
-            </li>
-            <li>
-              Check if the two characters are the same. If they are not, then
-              invalid palindrome.
-            </li>
-            <li>
-              When the two pointers crossed, it means we have examined all
-              characters, and it is a valid palindrome.
+              Count the frequency of characters for both strings, and compare if
+              they are the same.
             </li>
           </ul>
         </div>
@@ -600,8 +634,16 @@
             >Group Anagrams</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/12/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <li>
+              Sort each string, and store in a dictionary with the sorted string
+              as the key, and the value as a list of strings.
+            </li>
+            <li>Return all the values in the dictionary.</li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">55</div>
@@ -645,18 +687,55 @@
             >Valid Palindrome</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/11/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <li>
+              Use a two pointers, i and j. i pointing at the beginning of the
+              string, j pointing at the end.
+            </li>
+            <li>
+              Check if the characters at the two pointers are alphanumeric, if
+              not, then skip that character.
+            </li>
+            <li>
+              Check if the two characters are the same. If they are not, then
+              invalid palindrome.
+            </li>
+            <li>
+              When the two pointers crossed, it means we have examined all
+              characters, and it is a valid palindrome.
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">57</div>
         <div class="row-item">
+          &#11088;
           <a href="https://leetcode.com/problems/longest-palindromic-substring/"
             >Longest Palindromic Substring</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/13/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <li>
+              Iterate through each character of the string. For each character,
+              look to the left and to the right of the string and check if it is
+              a palindrome.
+            </li>
+            <li>
+              Keep track of the length of the longest palindome seen so far, and
+              the palindrom itself.
+            </li>
+            <li>
+              If found a longer palindrome, update the length and the longest
+              palindrom.
+            </li>
+            <li>Make sure to check for both even and odd length palindrome.</li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">58</div>
@@ -665,8 +744,18 @@
             >Palindromic Substrings</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/13/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <li>
+              This is a variation of the Longest Palindromic Substring problem.
+            </li>
+            <li>
+              Instead of keeping track of the longest substring, keep track of
+              the count.
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">59</div>
@@ -693,8 +782,48 @@
         <div class="row-item">
           <a href="https://leetcode.com/problems/same-tree/">Same Tree</a>
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/13/2024</div>
+        <div class="row-item approach">
+          <ol>
+            <li>
+              Iterative breadth first search
+              <ul>
+                <li>Initialize two queues - p_queue and q_queue.</li>
+                <li>
+                  While both queues are not empty, pop the nodes from the front
+                  of the queues, and compare them, including null.
+                </li>
+                <li>
+                  After exiting the while loop, check if both queues are empty.
+                  If one is empty and the other is not, then it's not the same
+                  tree.
+                </li>
+                <li>Return true in the end.</li>
+                <li>
+                  O(|p| + |q|) time and space, |p| = # of nodes in p, |q| = # of
+                  nodes in q
+                </li>
+              </ul>
+            </li>
+            <li>Recursion</li>
+            <ul>
+              <li>Simpler and shorter code.</li>
+
+              <li>
+                Base cases: If both p and q are None, return true. If only one
+                is None, return false.
+              </li>
+              <li>
+                If both are not None, then check if the values are the same.
+              </li>
+              <li>Call function recursively on both left and right child.</li>
+              <li>
+                O(|p| + |q|) time & O(h) space, |p| = # of nodes in p, |q| = #
+                of nodes in q, h = max height of the tree
+              </li>
+            </ul>
+          </ol>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">62</div>
