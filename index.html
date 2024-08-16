@@ -23,7 +23,7 @@
     </p>
     <p>Date started: 8/12/2024</p>
     <p>Target completion date: 11/25/2024</p>
-    <p>Current count: 12 out of 76 (16%)</p>
+    <p>Current count: 17 out of 76 (22%)</p>
     <div class="table-container">
       <div class="row header-row">
         <div class="row-item">#</div>
@@ -167,13 +167,26 @@
       <div class="row">
         <div class="row-item">7</div>
         <div class="row-item">
+          &#11088;
           <a
             href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/"
             >Find Minimum in Rotated Sorted Array</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/14/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <p><strong>Binary search variation</strong></p>
+            <li>
+              Initialize two pointers, lo and hi, and calculate mid index.
+            </li>
+            <li>
+              Check if nums at index hi is less than nums at mid index, then the
+              minimum is in the right half and vice versa.
+            </li>
+            <li>Need to watch out for off by one error.</li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">8</div>
@@ -265,10 +278,52 @@
       <div class="row">
         <div class="row-item">17</div>
         <div class="row-item">
+          &#11088;
           <a href="https://leetcode.com/problems/coin-change/">Coin Change</a>
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/15/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <p><strong>Recursion with memoization</strong></p>
+            <li>
+              Base case: When amount = 0 , return 0. When amount &le; 0, change
+              is not possible, return positive infinity.
+            </li>
+            <li>
+              Recursive case: Loop through each coin, and call the function with
+              the amount reduced by the coin amount.
+            </li>
+            <li>
+              Keep track of the minimum number of coin, add one to it, and
+              return.
+            </li>
+            <li>Use a memo to save from doing repeated computation.</li>
+            <li>
+              Let a = amount, c = number of coins, O(a*c) time and O(a) space
+            </li>
+            <p><strong>Dynamic programming with tabulation</strong></p>
+            <li>Initialize a cache array with length of amount + 1.</li>
+            <li>
+              Seed the cache at dp[0] = 0, as the min coin to make up 0 is 0.
+            </li>
+            <li>
+              Iterate through the dp cache from 1 to len(dp), and try out each
+              coin in the coins list as if it is the last coin we pick.
+            </li>
+            <li>
+              The remaining amount to change after picking that coin will be a
+              previous subproblem we already solved.
+            </li>
+            <li>
+              Look for the min coin for the remaining amount and add 1, and if
+              it is smaller that what is in the dp table, update the dp table
+              with the smaller coin count.
+            </li>
+            <li>
+              Let a = amount, c = number of coins, O(a*c) time & O(a) space.
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">18</div>
@@ -490,8 +545,20 @@
             >Reverse a Linked List</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/14/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <li>Keep track of a previous node and current node.</li>
+            <li>
+              Save the next node in a temp variable before changing the
+              current.next pointer to previous.
+            </li>
+            <li>
+              Keep changing current.next pointer until current is None, then
+              return previous.
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">41</div>
@@ -500,18 +567,43 @@
             >Detect Cycle in a Linked List</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/14/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <p><strong>Hare and tortoise method</strong></p>
+            <li>Initialize two pointers, slow and fast.</li>
+            <li>
+              Move the slow pointer by 1 node, and the fast pointer by 2 nodes.
+            </li>
+            <li>If the two pointers meet, then there is a cycle.</li>
+            <li>No cycle if reach end of the linked list.</li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">42</div>
         <div class="row-item">
+          &#11088;
           <a href="https://leetcode.com/problems/merge-two-sorted-lists/"
             >Merge Two Sorted Lists</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/14/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <p><strong>Create temp head</strong></p>
+            <li>
+              While both list are not empty, compare the front of the two list,
+              whichever is smaller, point the tempHead to that node, and move
+              the current pointer to next.
+            </li>
+            <li>
+              Once exited the while loop, one of the list might still have
+              values, if it is, append to the end of the list, and return
+              tempHead.next
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">43</div>
