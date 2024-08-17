@@ -359,12 +359,42 @@
       <div class="row">
         <div class="row-item">21</div>
         <div class="row-item">
-          <a href="https://leetcode.com/problems/combination-sum-iv/"
+          &#11088; &#11088; &#11088;
+
+          <a href="https://leetcode.com/problems/combination-sum/"
             >Combination Sum</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/16/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <p><strong>Tabulation method most intuitive</strong></p>
+            <li>
+              Initialize a dp table of length (target + 1). Default value to be
+              an empty array [].
+            </li>
+            <li>
+              Seed the value of dp[0] to be an array of an empty array [[]].
+              This is because the combination to sum up to 0 is not to choose
+              anything.
+            </li>
+            <li>Iterate through each candidate in the outer for loop.</li>
+            <li>
+              In the inner for loop, for each candidate, loop through each
+              subproblem from candidate up to the end of the dp array. For
+              example, if candidate is 2 and the target is 8, then loop from 2
+              to 8 inclusive.
+            </li>
+            <li>
+              Key into dp[i - candidate] to see if there are any combination
+              that sums up to i - candidate. If there is any, make a copy of the
+              combinations, loop through each of the copy of combination, and
+              append candidate.
+            </li>
+            <li>Save all the copies appended with new candidate into dp[i].</li>
+            <li>In the end, return the list of combinations of target.</li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">22</div>
@@ -1071,6 +1101,22 @@
         </div>
         <div class="row-item"></div>
         <div class="row-item approach"></div>
+      </div>
+      <div class="row">
+        <div class="row-item">77</div>
+        <div class="row-item">
+          <a href="https://leetcode.com/problems/coin-change-ii/"
+            >Coin Change II</a
+          >
+        </div>
+        <div class="row-item"></div>
+        <div class="row-item approach">
+          <ul>
+            <p><strong>0/1 knapsack problem</strong></p>
+            <p>A bit tricky approach. Need to practice more.</p>
+            <a href="https://www.youtube.com/watch?v=OM1myudbIqA">Reference.</a>
+          </ul>
+        </div>
       </div>
     </div>
     <h3>Progress</h3>
