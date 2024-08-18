@@ -23,7 +23,7 @@
     </p>
     <p>Date started: 8/12/2024</p>
     <p>Target completion date: 11/25/2024</p>
-    <p>Current count: 17 out of 76 (22%)</p>
+    <p>Current count: 19 out of 76 (25%)</p>
     <div class="table-container">
       <div class="row header-row">
         <div class="row-item">#</div>
@@ -272,8 +272,31 @@
             >Climbing Stairs</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/18/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <p><strong>Recursion with memoization</strong></p>
+            <li>
+              Base case: When n = 0, we have found a way, return 1. When n &le;
+              0, there is no way, return 0.
+            </li>
+            <li>
+              Sum up the return values from recusive calls on n-1 and n-2 (as we
+              are only allowed to take 1 or 2 steps).
+            </li>
+            <p><strong>Dynamic programming with tabulation</strong></p>
+            <li>Initialize a dp array with length of n + 1.</li>
+            <li>
+              Seed: At n = 0, there is 1 way to climb stairs with 0 steps, that
+              is to take no step at all.
+            </li>
+            <li>
+              Iterate through the dp array, and add up the ways to climb up n -
+              1 and n - 2 steps.
+            </li>
+            <li>In the end, return dp[-1]</li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">17</div>
@@ -333,8 +356,28 @@
             >Longest Increasing Subsequence</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/18/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <p><strong>Dynamic programming with tabulation</strong></p>
+            <li>
+              Initialize a dp array with length nums and fill with value 1
+              because every individual number has a longest subsequence of 1.
+            </li>
+            <li>
+              Solve with nested for loops. Outer loop will iterate from i = 1 to
+              len(dp), inner loop will iterate from j = 0 to i.
+            </li>
+            <li>
+              Compare nums[i](right number) with nums[j] (left number). If the
+              right number is greater than the left number, the length of the
+              subsequence can be increased. Choose the maximum length to fill in
+              dp[i].
+            </li>
+            <li>In the end, return the largest value in the dp array.</li>
+            <li>O(n<sup>2</sup>) time, O(n) space</li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">19</div>
@@ -343,8 +386,29 @@
             >Longest Common Subsequence</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/18/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <p><strong>Dynamic programming with tabulation</strong></p>
+            <li>
+              Prepend text1 and text2 with one random but different character in
+              the front.
+            </li>
+            <li>
+              Initialize a 2D dp array with len(text1) rows and len(text2)
+              columns, filled with 0.
+            </li>
+            <li>
+              Compare characters for the two texts, if the characters are the
+              same, add 1 to the LCS[i-1][j-1].
+            </li>
+            <li>
+              If the characters are not the same, then fill dp[i][j] with
+              max(dp[i-1][j], dp[i][j-1])
+            </li>
+            <li>Return dp[-1][-1]</li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">20</div>
@@ -401,8 +465,24 @@
         <div class="row-item">
           <a href="https://leetcode.com/problems/house-robber/">House Robber</a>
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/18/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <li>
+              Initialize two variables, rob1 and rob2, both to 0. Rob1
+              represents profit by robbing the first house, and rob2 represents
+              profit by robbing the 2nd house but skipping the first.
+            </li>
+            <li>
+              Iterate through the houses, and calculate the max profit by either
+              robbing current house + rob1, or not to rob current house, in
+              which the profit is rob2.
+            </li>
+            <li>Update the variables rob1 = rob2, rob2 = current profit.</li>
+            <li>Return rob2.</li>
+            <li>O(n) time and O(1) space.</li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">23</div>
