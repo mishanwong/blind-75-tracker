@@ -23,7 +23,7 @@
     </p>
     <p>Date started: 8/12/2024</p>
     <p>Target completion date: 9/23/2024</p>
-    <p>Current count: 22 out of 76 (29%)</p>
+    <p>Current count: 28 out of 76 (37%)</p>
     <div class="table-container">
       <div class="row header-row">
         <div class="row-item">#</div>
@@ -36,8 +36,18 @@
         <div class="row-item">
           <a href="https://leetcode.com/problems/two-sum/">Two Sum</a>
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/22/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <li>Initialize a dictionary to store complements.</li>
+            <li>
+              Iterate through the num in nums, if the complement (target - num)
+              is found in the complements dictionary, then return the pair of
+              indices.
+            </li>
+            <li>O(n) time O(n) space</li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">2</div>
@@ -976,8 +986,26 @@
             >Maximum Depth of Binary Tree</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/22/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <li>
+              Recursively call left child and right child if they are not None.
+            </li>
+            <li>
+              Once encounter a leaf node (left and right child are both None),
+              return 1.
+            </li>
+            <li>
+              Return 1 + the maximum return value from left and right subcall.
+            </li>
+            <li>Remember to check for empty root.</li>
+            <li>
+              O(n) time (visiting every node), and O(log n) space (max height of
+              tree)
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">61</div>
@@ -1034,8 +1062,22 @@
             >Invert/Flip Binary Tree</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/22/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <li>Base case: return None if root is None.</li>
+            <li>
+              Assign root.left to the return value of recursive call on
+              root.right.
+            </li>
+            <li>
+              Assign root.right to the return value of recursive call on
+              root.left
+            </li>
+            <li>Return root.</li>
+            <li>O(n) time and O(log n) space.</li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">63</div>
@@ -1055,8 +1097,31 @@
             >Binary Tree Level Order Traversal</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/22/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <p><strong>Breadth First Search</strong></p>
+            <li>Check if root is None. If root is None, return [].</li>
+            <li>Use BFS. Initialize a queue with a tuple (root, level = 0)</li>
+            <li>Initializea result array.</li>
+            <li>
+              While queue is not empty, pop a tuple from the front of the queue.
+            </li>
+            <li>
+              If len(result) is greater than level, then append the current
+              value into result[level].
+            </li>
+            <li>
+              Otherwise, append a new array containing current value to the
+              result array.
+            </li>
+            <li>
+              For both left and right child, check if they are not None. If not
+              None, then append the tuple (childnode, level + 1) to the queue.
+            </li>
+            <li>Return result.</li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">65</div>
@@ -1076,8 +1141,26 @@
             >Subtree of Another Tree</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/22/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <p><strong>Depth first search</strong></p>
+            <li>
+              Compare the values of root and subroot, if they are the same, call
+              a subroutine to check if they are the same tree.
+            </li>
+            <li>
+              If the values of root and subroot are not the same, then
+              recursively call on left and right children of root, but keep
+              subroot the same.
+            </li>
+            <li>
+              Be careful to not return too early when calling the subroutine.
+              Check all child nodes to see if they are the same trees with
+              subroot before returning.
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">67</div>
@@ -1097,8 +1180,34 @@
             >Validate Binary Search Tree</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/22/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <li>
+              Use a helper function to recursively vall left subtree and right
+              subtree.
+            </li>
+            <li>
+              Base case 1: Root is None, return a tuple of 3 elements (True,
+              inf, -inf). The tuple value represents (BST is valid, min value in
+              subtree, max value in subtree).
+            </li>
+            <li>
+              Base case 2: Reached a leaf node, a leaf node is always a valid
+              BST, min and max value of a tree with only one node is the value
+              of the node itself. So, return (True, root.val, root.val)
+            </li>
+            <li>
+              Call left subtree and right subtree. From the return values of
+              both calls, check that root.val is greater than max val from left
+              subtree and less than the min val from the right subtree.
+            </li>
+            <li>
+              Return a tuple (True/False, min(left_min, root.val), max(root.val,
+              right_max))
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">69</div>
@@ -1107,8 +1216,18 @@
             >Kth Smallest Element in a BST</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/22/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <p><strong>In Order Traversal</strong></p>
+            <li>
+              Use a helper function to traverse the tree in-order and save the
+              values in an array. With in order traversal, the values will be
+              sorted.
+            </li>
+            <li>Return the value at index k - 1.</li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">70</div>
