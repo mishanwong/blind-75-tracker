@@ -23,7 +23,7 @@
     </p>
     <p>Date started: 8/12/2024</p>
     <p>Target completion date: 9/23/2024</p>
-    <p>Current count: 28 out of 76 (37%)</p>
+    <p>Current count: 30 out of 76 (39%)</p>
     <div class="table-container">
       <div class="row header-row">
         <div class="row-item">#</div>
@@ -501,8 +501,19 @@
             >House Robber II</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/23/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <li>
+              Similar to House Robber I, but run throught the list of houses
+              twice, first omitting the first house, and second omitting the
+              last house.
+            </li>
+            <li>Choose the max profit between the 2 runs.</li>
+            <li>Guard against list of length 1.</li>
+            <li>O(n) time and O(1) space.</li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">24</div>
@@ -523,10 +534,40 @@
       <div class="row">
         <div class="row-item">26</div>
         <div class="row-item">
+          &#11088;
+
           <a href="https://leetcode.com/problems/jump-game/">Jump Game</a>
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/23/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <li>
+              It is tempting to use dynamic programming, but a simple for loop
+              is much more elegant and efficient.
+            </li>
+            <li>
+              Think of every num is a gas station with num gallons of gas. Start
+              with your gas tank empty.
+            </li>
+            <li>
+              As you arrive at each gas station, you can fill up to the maximum
+              of your gas level now or the available gas at the gas station.
+            </li>
+            <li>
+              Reduce one gallon of gas as you move to each successive gas
+              station.
+            </li>
+            <li>
+              If at any point, your gas is negative, then it is not possible to
+              move further, return False.
+            </li>
+            <li>
+              After iterating through every nums / gas station, you have reached
+              the end. Return True.
+            </li>
+            <li>O(n) time, O(1) space.</li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">27</div>
@@ -573,8 +614,36 @@
             >Longest Consecutive Sequence</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/23/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <p><strong>Use a heap data structure</strong></p>
+            <li>If nums list is empty, return 0.</li>
+            <li>
+              Heapify the nums list with heapq.heapify. Heapify has O(n) time
+              complexity.
+            </li>
+            <li>
+              Initialize two counter variables, current_count and max_count.
+            </li>
+            <li>Pop from the top of the heap to get the minimim value.</li>
+            <li>While the nums heap is not empty, pop a second value.</li>
+            <li>
+              Compare the first value and the second value. If second = first +
+              1, the sequence length is extended. Increment the current_count
+              and update the max_count.
+            </li>
+            <li>
+              If second > first + 1, current sequence is terminated. Reset the
+              current_count to 1.
+            </li>
+            <li>
+              Replace the first value with the second value, and while loop
+              continues.
+            </li>
+            <li>Return max_count.</li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">32</div>
@@ -1312,15 +1381,15 @@
         <div class="row-item approach">
           <ul>
             <p><strong>Dynamic programming with tabulation</strong></p>
-            <p>Create a dp array of length (amount + 1).</p>
-            <p>
+            <li>Create a dp array of length (amount + 1).</li>
+            <li>
               Seed dp[0] = 1, there is 1 way to make up amount 0, is to select
               none of the coins.
-            </p>
-            <p>
+            </li>
+            <li>
               Iterate over the coin first, then iterate over the amount
               subproblem.
-            </p>
+            </li>
             <a href="https://www.youtube.com/watch?v=OM1myudbIqA">Reference.</a>
           </ul>
         </div>
