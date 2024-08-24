@@ -23,7 +23,7 @@
     </p>
     <p>Date started: 8/12/2024</p>
     <p>Target completion date: 9/23/2024</p>
-    <p>Current count: 30 out of 76 (39%)</p>
+    <p>Current count: 32 out of 76 (42%)</p>
     <div class="table-container">
       <div class="row header-row">
         <div class="row-item">#</div>
@@ -224,8 +224,23 @@
             >Container With Most Water</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/23/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <p><strong>Two pointers</strong></p>
+            <li>
+              Initialize two pointers, one pointing at each end of the array.
+            </li>
+            <li>
+              Calculate the area between the two pointers = min(height[i],
+              height[j]).
+            </li>
+            <li>Keep track of the maximum area seen so far.</li>
+            <li>Move the pointer that has the lower height between the two.</li>
+            <li>Return the max area.</li>
+            <li>O(n) time and O(1) space.</li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">11</div>
@@ -1151,12 +1166,33 @@
       <div class="row">
         <div class="row-item">63</div>
         <div class="row-item">
+          &#11088; &#11088; &#11088;
+
           <a href="https://leetcode.com/problems/binary-tree-maximum-path-sum/"
             >Binary Tree Maximum Path Sum</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/23/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <p><strong>Depth First Search</strong></p>
+            <li>Keep track of max_sum so far with a global variable.</li>
+            <li>
+              Use a helper recursive function to call on the left subtree and
+              the right subtree.
+            </li>
+            <li>
+              On reach recursive call, keep track of the maximum of either (i)
+              max sum so far, (ii) root.val + left, (iii) root.val + right, (iv)
+              root.val + left + right, (v) root.val
+            </li>
+            <li>
+              Retun only either (i) root.val, (ii) root.val + left, (iii)
+              root.val + right
+            </li>
+            <li>In the main function, return the global variable max_sum</li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">64</div>
