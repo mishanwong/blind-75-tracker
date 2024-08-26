@@ -23,7 +23,7 @@
     </p>
     <p>Date started: 8/12/2024</p>
     <p>Target completion date: 9/23/2024</p>
-    <p>Current count: 35 out of 76 (46%)</p>
+    <p>Current count: 37 out of 76 (49%)</p>
     <div class="table-container">
       <div class="row header-row">
         <div class="row-item">#</div>
@@ -535,16 +535,54 @@
         <div class="row-item">
           <a href="https://leetcode.com/problems/decode-ways/">Decode Ways</a>
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/26/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <p><strong>Recursion with memoization</strong></p>
+            <li>
+              Recursively call function with shortened string by first digit and
+              by first 2 digits.
+            </li>
+            <li>
+              Check for 2 conditions. First, if the first digit is 0, there is
+              no way to decode this string. Return 0. Second, if the first 2
+              digit is greater than 26, there is no way to decode this as well.
+              But take care not to return too early. Only adjust the return
+              value after calling the recursive function.
+            </li>
+            <li>When the string is empty, we found 1 way to decode it.</li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">25</div>
         <div class="row-item">
           <a href="https://leetcode.com/problems/unique-paths/">Unique Paths</a>
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/26/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <p><strong>Recursion with memoization</strong></p>
+            <li>
+              Base case: When m == 1 and n == 1, you have reached the
+              destination, return 1. Base case 2: When either m == 0 or n == 0,
+              there is no path, return 0.
+            </li>
+            <li>
+              Recursively call the function by either decreasing the row (move
+              down) or decreasing the column (move right).
+            </li>
+            <li>The sum of all the return count is the solution.</li>
+            <p><strong>Dynamic programming with abulation</strong></p>
+            <li>Create a 2-D array with m rows and n columns.</li>
+            <li>Seed initial values to 1.</li>
+            <li>
+              Iterate from penultimate row and penultimate column. Update
+              dp[row][col] = dp[row+1][col] + dp[row][col+1].
+            </li>
+            <li>Return dp[0][0].</li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">26</div>
@@ -589,8 +627,22 @@
         <div class="row-item">
           <a href="https://leetcode.com/problems/clone-graph/">Clone Graph</a>
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/26/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <p>2 steps approach:</p>
+            <li>
+              First, iterate through all nodes of the graph, create a clone of
+              each node and store the reference to the nodes in a dictionary,
+              with key as the node value, and value as the reference to the
+              node.
+            </li>
+            <li>
+              Second, iterate through all the nodes of the original graph again,
+              and create the links in the cloned nodes.
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">28</div>
@@ -1453,8 +1505,8 @@
         <div class="row-item">2</div>
         <div class="row-item">08-26-2024</div>
         <div class="row-item">30</div>
-        <div class="row-item"></div>
-        <div class="row-item"></div>
+        <div class="row-item">36</div>
+        <div class="row-item">120%</div>
       </div>
 
       <div class="progress-row">
