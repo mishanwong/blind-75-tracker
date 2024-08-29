@@ -23,7 +23,7 @@
     </p>
     <p>Date started: 8/12/2024</p>
     <p>Target completion date: 9/23/2024</p>
-    <p>Current count: 37 out of 76 (49%)</p>
+    <p>Current count: 40 out of 76 (53%)</p>
     <div class="table-container">
       <div class="row header-row">
         <div class="row-item">#</div>
@@ -206,16 +206,44 @@
             >Search in Rotated Sorted Array</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/28/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <p><strong>Binary search variation</strong></p>
+            <li>
+              Initialize two pointers, lo and hi, and calculate mid index.
+            </li>
+            <li>
+              Check if the target is at either lo, hi or mid. If target is
+              found, return the corresponding index.
+            </li>
+            <li>In a while loop, check which half of the array is sorted.</li>
+            <li>
+              In the sorted half of the array, if target is in between the
+              range, then the target is in this half, otherwise it is in the
+              other half. Update pointers accordingly.
+            </li>
+            <li>Return -1 in the end of target is no in the array.</li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">9</div>
         <div class="row-item">
           <a href="https://leetcode.com/problems/3sum/">3 Sum</a>
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/28/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <li>Extension of two sum with sorted array.</li>
+            <li>First, sort the input array.</li>
+            <li>
+              Iterate through the array, and do a two sum on the subarray to the
+              right of current num to find the complement.
+            </li>
+            <li>Skip over any repeating num to avoid duplicate triplets.</li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">10</div>
@@ -442,8 +470,32 @@
             >Word Break Problem</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/28/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <p><strong>Recursion with memoization</strong></p>
+            <li>
+              Create a dictionary where the key is the first character of a
+              word, and the value is a list of all the words starting with that
+              character.
+            </li>
+            <li>Use a helper function for the recursive call.</li>
+            <li>
+              Base cases: (i) If len(s) == 0, then there is a way to break up
+              the word. Return True. (ii) If the first character of the string
+              is not found in the dictionary, then there isn't a way to break up
+              the word. Return False.
+            </li>
+            <li>
+              Recursive case: Get all the words that start with the first
+              character from the dictionary. Iterate through the words, and if
+              the word don't match the starting of the string, continue to next
+              word. Use an OR operation to keep track of whether it is possible
+              or not. If only one branch is possible, then there is a way.
+            </li>
+            <li>Memoize the result.</li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">21</div>
