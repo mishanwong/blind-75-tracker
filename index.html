@@ -23,7 +23,7 @@
     </p>
     <p>Date started: 8/12/2024</p>
     <p>Target completion date: 9/23/2024</p>
-    <p>Current count: 40 out of 76 (53%)</p>
+    <p>Current count: 42 out of 76 (55%)</p>
     <div class="table-container">
       <div class="row header-row">
         <div class="row-item">#</div>
@@ -699,12 +699,52 @@
       <div class="row">
         <div class="row-item">28</div>
         <div class="row-item">
+          &#11088; &#11088; &#11088;
           <a href="https://leetcode.com/problems/course-schedule/"
             >Course Schedule</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/29/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <p>
+              <strong
+                >Topological Sort. White-Grey-Black Cycle Detection
+                Algorithm.</strong
+              >
+            </p>
+            <li>
+              Create an adjacency list where key is the course, and the value is
+              a list of prerequisites.
+            </li>
+            <li>
+              Iterate over the keys of the adjacency list (the white set), and
+              perform DFS.
+            </li>
+            <li>
+              Keep track of courses that we have explored fully in previous DFS
+              round, call it the visited set (or the black set).
+            </li>
+            <li>
+              Keep track of courses that are visited in the current DFS round,
+              call it visiting set, (or the grey set). If we loop back to a
+              course that is in the visiting set, then there is a cycle. Return
+              False immediately.
+            </li>
+            <li>
+              If have not returned False, then add the course to the visited
+              set, and return True to the main calling function.
+            </li>
+            <li>
+              In the main function, if at any point the DFS function return
+              False, then return False immediately, no need to continue.
+            </li>
+            <li>
+              When we have processed all the courses in the white set and still
+              have not returned False, then return True.
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">29</div>
@@ -723,8 +763,22 @@
             >Number of Islands</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">8/29/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <li>
+              Iterate through each cell in the grid, if the cell is land, then
+              explore the island using either BFS or DFS.
+            </li>
+            <li>DFS' code is much simpler and less prone to error.</li>
+            <li>
+              While doing DFS, change the cell value from "1" to "0" to mark as
+              visited.
+            </li>
+            <li>When DFS returns, simply increment the island count by 1.</li>
+            <li>Return island count.</li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">31</div>
