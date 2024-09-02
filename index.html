@@ -23,7 +23,7 @@
     </p>
     <p>Date started: 8/12/2024</p>
     <p>Target completion date: 9/23/2024</p>
-    <p>Current count: 42 out of 76 (55%)</p>
+    <p>Current count: 45 out of 76 (59%)</p>
     <div class="table-container">
       <div class="row header-row">
         <div class="row-item">#</div>
@@ -857,8 +857,29 @@
             >Insert Interval</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">9/1/2024</div>
+        <div class="row-item approach">
+          <ol>
+            <p><strong>3 steps:</strong></p>
+            <li>
+              Append all intervals which start time is earlier than the start
+              time of the new interval into a result list.
+            </li>
+            <li>
+              Merge the new interval into the result list. If the new interval
+              start time is after the end time of the last interval in the
+              result list, then simply append the new interval. However, if the
+              start time of the new interval is before the end time of the last
+              interval, then there is an overlap. Update the end time of the
+              last interval to the max(end time of new interval, end time of
+              last interval).
+            </li>
+            <li>
+              After inserting the new interval, Append all remaining intervals
+              to the result list. Return result list.
+            </li>
+          </ol>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">36</div>
@@ -867,8 +888,24 @@
             >Merge Intervals</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">9/1/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <p><strong>Similar approach to Insert Interval</strong></p>
+            <li>First, sort the intervals by start time.</li>
+            <li>Seed the result list with the first interval.</li>
+            <li>
+              For each interval, compare the start time to the end time of the
+              last interval. If they overlap, update the end time of the last
+              interval to the max(end time of last interval, end time of current
+              interval).
+            </li>
+            <li>
+              If they don't overlap, simply append the new interval to the
+              result list. Return result list.
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">37</div>
@@ -877,8 +914,29 @@
             >Non-overlapping Intervals</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">9/1/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <p>
+              <strong
+                >Greedy approach. A variation of the Activity Scheduling Problem
+                in CS325</strong
+              >
+            </p>
+            <li>Sort the intervals by end time.</li>
+            <li>Keep track of the latest end time.</li>
+            <li>
+              Loop through each of the interval, if the start time is earlier
+              than the lastest end time, there is an overalp and the interval
+              needs to be removed. Increment a counter.
+            </li>
+            <li>
+              If they don't overlap, no need to remove any interval, simply
+              update the max end time.
+            </li>
+            <li>Return the counter.</li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">38</div>
@@ -1619,14 +1677,14 @@
         <div class="row-item">3</div>
         <div class="row-item">09-02-2024</div>
         <div class="row-item">45</div>
-        <div class="row-item"></div>
-        <div class="row-item"></div>
+        <div class="row-item">45</div>
+        <div class="row-item">100%</div>
       </div>
 
       <div class="progress-row">
         <div class="row-item">4</div>
         <div class="row-item">09-09-2024</div>
-        <div class="row-item">60</div>
+        <div class="row-item">50</div>
         <div class="row-item"></div>
         <div class="row-item"></div>
       </div>
@@ -1634,7 +1692,7 @@
       <div class="progress-row">
         <div class="row-item">5</div>
         <div class="row-item">09-16-2024</div>
-        <div class="row-item">60</div>
+        <div class="row-item">55</div>
         <div class="row-item"></div>
         <div class="row-item"></div>
       </div>
@@ -1642,7 +1700,14 @@
       <div class="progress-row">
         <div class="row-item">6</div>
         <div class="row-item">09-23-2024</div>
-        <div class="row-item">75</div>
+        <div class="row-item">65</div>
+        <div class="row-item"></div>
+        <div class="row-item"></div>
+      </div>
+      <div class="progress-row">
+        <div class="row-item">6</div>
+        <div class="row-item">09-30-2024</div>
+        <div class="row-item">76</div>
         <div class="row-item"></div>
         <div class="row-item"></div>
       </div>
