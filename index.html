@@ -23,7 +23,7 @@
     </p>
     <p>Date started: 8/12/2024</p>
     <p>Target completion date: 9/23/2024</p>
-    <p>Current count: 45 out of 76 (59%)</p>
+    <p>Current count: 50 out of 76 (66%)</p>
     <div class="table-container">
       <div class="row header-row">
         <div class="row-item">#</div>
@@ -287,8 +287,15 @@
             >Number of 1 Bits</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">9/3/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <li>
+              One line solution. Convert the number to binary using bin(), and
+              count the number of 1's using count()
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">13</div>
@@ -297,8 +304,17 @@
             >Counting Bits</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">9/3/2024</div>
+        <div class="row-item approach">
+          <ol>
+            <p>2 ways to solve:</p>
+            <li>Convert to binary and count the number of 1's.</li>
+            <li>
+              Use math.log2 for each value of i in range(n) to check if there is
+              any remainder.
+            </li>
+          </ol>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">14</div>
@@ -307,16 +323,33 @@
             >Missing Number</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">9/3/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <li>
+              Sum of all natural numbers up to n (n * (n+1) / 2) minus the sum
+              of all the numbers in the array.
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">15</div>
         <div class="row-item">
           <a href="https://leetcode.com/problems/reverse-bits/">Reverse Bits</a>
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">9/3/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <li>Conver the integer into binary.</li>
+            <li>
+              Iterate from right to left of the binary string, and multiply it
+              starting by 2^31, then 2^30, then 2^29 until index 2 of the binary
+              string. Index 0-1 are 0b.
+            </li>
+            <li>Sum up the total and return it.</li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">16</div>
@@ -753,8 +786,27 @@
             >Pacific Atlantic Water Flow</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">9/3/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <li>
+              Create 2 deques, one for pacific and one for atlantic. Fill the
+              pacific deque with coordinates with (0, j), and (i, 0) and
+              atlantic deque with coordinates (len(matrix) - 1, j) and (i,
+              len(matrix[0]) - 1)
+            </li>
+            <li>
+              Create a helper function called "reacheable" that takes in a queue
+              deque. Perform BFS and add all the coordinates that are reachable
+              to pacific in a pacific_set and all the coordinates that are
+              reachable to the atlantic in an atlantic_set.
+            </li>
+            <li>
+              Find the intersection between pacific_set and atlantic_set and
+              return the list.
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">30</div>
