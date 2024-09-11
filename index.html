@@ -1139,8 +1139,24 @@
         <div class="row-item">
           <a href="https://leetcode.com/problems/word-search/">Word Search</a>
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">9/7/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <p><strong>DFS and backtracking</strong></p>
+            <li>
+              Iterate through every cell, once found a cell which character
+              match the first letter of the word, call a helper function.
+            </li>
+            <li>
+              Helper function will search all neighbors with DFS algorithm, and
+              backtrack if did not match.
+            </li>
+            <li>
+              Once all the letters are matched, return True. If no match is
+              found after iterating through all cells, return False
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">50</div>
