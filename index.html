@@ -23,7 +23,7 @@
     </p>
     <p>Date started: 8/12/2024</p>
     <p>Target completion date: 9/23/2024</p>
-    <p>Current count: 50 out of 76 (66%)</p>
+    <p>Current count: 54 out of 76 (71%)</p>
     <div class="table-container">
       <div class="row header-row">
         <div class="row-item">#</div>
@@ -1113,8 +1113,28 @@
             >Set Matrix Zeroes</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">9/2/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <li>
+              Use the row 0 and column 0 to indicate whether that row/col need
+              to be set to zeroes.
+            </li>
+            <li>
+              Start iterating for row 1 and col 1, if encountered a zero, then
+              set the indicating row to zero.
+            </li>
+            <li>
+              Iterate for the second time from row 1 and col 1, if corresponding
+              top row and top col is zero, that means set this cell as zero.
+            </li>
+            <li>
+              Finally, check if the col 0 and row 0 need to be set to zero. This
+              is indicated by 2 boolean variables.
+            </li>
+            <li>O(1) space and O(mn) time</li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">47</div>
@@ -1636,8 +1656,30 @@
             >Implement Trie (Prefix Tree)</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">9/11/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <li>Use a dictionary to implement the trie.</li>
+            <li>
+              For insert, if the first character is not one of the key, then add
+              the key and an empty dictionary as value.
+            </li>
+            <li>
+              If the first character is one of the key, then key into it and
+              continue checking for the 2nd character and so on.
+            </li>
+            <li>
+              Continue until the end of the word. Add the key True to indicate
+              that this is the end of one string.
+            </li>
+            <li>
+              Similar approach for search. Check if the first character is in
+              the key. If not found, means the word is not in the trie. If
+              found, then continue searching for 2nd character and so on until
+              the end of the word.
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">72</div>
@@ -1647,8 +1689,16 @@
             >Add and Search Word</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">9/11/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <li>Similar approach to "Implement Trie (Prefix Tree)" question</li>
+            <li>
+              When encountered the wildcard character ".", iterate through all
+              the keys and search for word in each subtree.
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">73</div>
@@ -1753,8 +1803,8 @@
         <div class="row-item">4</div>
         <div class="row-item">09-09-2024</div>
         <div class="row-item">50</div>
-        <div class="row-item"></div>
-        <div class="row-item"></div>
+        <div class="row-item">52</div>
+        <div class="row-item">104%</div>
       </div>
 
       <div class="progress-row">
