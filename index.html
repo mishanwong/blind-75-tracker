@@ -22,8 +22,8 @@
       >
     </p>
     <p>Date started: 8/12/2024</p>
-    <p>Target completion date: 9/23/2024</p>
-    <p>Current count: 54 out of 76 (71%)</p>
+    <p>Target completion date: 9/30/2024</p>
+    <p>Current count: 55 out of 76 (72%)</p>
     <div class="table-container">
       <div class="row header-row">
         <div class="row-item">#</div>
@@ -1103,8 +1103,38 @@
         <div class="row-item">
           <a href="https://leetcode.com/problems/reorder-list/">Reorder List</a>
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">9/14/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <p>
+              <strong
+                >Method 1: Use a dictionary to store pointer to all
+                nodes</strong
+              >
+            </p>
+            <li>
+              Create a dictionary that stores the position as the key, and the
+              node pointer as the value.
+            </li>
+            <li>
+              Iterate through first half of the list, and point to the second
+              half using index arithmetic.
+            </li>
+            <li>
+              Then iterate through second half of the list, and point to the
+              first half of the list using index arithmetic.
+            </li>
+            <li>Slight difference in index for odd and even length list.</li>
+            <li>Point the middle node to None.</li>
+            <li>O(n) time and O(n) space.</li>
+            <p>
+              <strong
+                >Method 2: Reverse 2nd half of list and weave two lists.</strong
+              >
+            </p>
+            <li>O(n) time and O(1) space.</li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">46</div>
