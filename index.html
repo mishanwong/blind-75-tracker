@@ -22,8 +22,8 @@
       >
     </p>
     <p>Date started: 8/12/2024</p>
-    <p>Target completion date: 9/30/2024</p>
-    <p>Current count: 59 out of 76 (78%)</p>
+    <p>Target completion date: 10/14/2024</p>
+    <p>Current count: 61 out of 76 (80%)</p>
     <div class="table-container">
       <div class="row header-row">
         <div class="row-item">#</div>
@@ -997,8 +997,22 @@
             >Meeting Rooms (Leetcode Premium)</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">9/27/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <li>Sort the intervals by start time.</li>
+            <li>Initialize a current end time variable.</li>
+            <li>
+              Iterate through the sorted list, if the start time is before
+              current end time, return False.
+            </li>
+            <li>Otherwise, update the end time.</li>
+            <li>
+              In the end, return True because none of the meetings have
+              conflict.
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">39</div>
@@ -1007,8 +1021,28 @@
             >Meeting Rooms II (Leetcode Premium)</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">9/27/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <p><strong>Line Sweep Method</strong></p>
+            <li>
+              Assign a label to start and end. E.g. True for start time, False
+              for end time.
+            </li>
+            <li>
+              Iterate through the intervals, push the tuple (start_time, label),
+              (end_time, label) into a min heap.
+            </li>
+            <li>Initialize two variables, count, and max count.</li>
+            <li>While the heap is not empty, pop from the top of the heap.</li>
+            <li>
+              If it is a start time, increment count, and keep track of the max
+              count so far.
+            </li>
+            <li>If it is an end time, decrement count.</li>
+            <li>In the end, return max count.</li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">40</div>
@@ -1932,12 +1966,27 @@
         <div class="row-item">6</div>
         <div class="row-item">09-23-2024</div>
         <div class="row-item">65</div>
+        <div class="row-item">59</div>
+        <div class="row-item">91%</div>
+      </div>
+      <div class="progress-row">
+        <div class="row-item">7</div>
+        <div class="row-item">09-30-2024</div>
+        <div class="row-item">65</div>
+        <div class="row-item"></div>
+        <div class="row-item"></div>
+      </div>
+
+      <div class="progress-row">
+        <div class="row-item">8</div>
+        <div class="row-item">10-07-2024</div>
+        <div class="row-item">70</div>
         <div class="row-item"></div>
         <div class="row-item"></div>
       </div>
       <div class="progress-row">
-        <div class="row-item">6</div>
-        <div class="row-item">09-30-2024</div>
+        <div class="row-item">9</div>
+        <div class="row-item">10-14-2024</div>
         <div class="row-item">76</div>
         <div class="row-item"></div>
         <div class="row-item"></div>
