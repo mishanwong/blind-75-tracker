@@ -23,7 +23,7 @@
     </p>
     <p>Date started: 8/12/2024</p>
     <p>Target completion date: 9/30/2024</p>
-    <p>Current count: 57 out of 76 (75%)</p>
+    <p>Current count: 59 out of 76 (78%)</p>
     <div class="table-container">
       <div class="row header-row">
         <div class="row-item">#</div>
@@ -1245,8 +1245,29 @@
             >Longest Substring Without Repeating Characters</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">9/18/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <p><strong>Hashmap and sliding window</strong></p>
+            <li>
+              Use a hashmap to store the index of when a character is last seen.
+            </li>
+            <li>
+              Initialize two variables to keep track of the start of a sliding
+              window and the longest non-repeating substring seen so far.
+            </li>
+            <li>
+              Iterate over the string, if seen this character before, then
+              update the start of the window to forget about all the character
+              up to when this character was previously seen.
+            </li>
+            <li>
+              At every iteration, update the longest non repeating substring,
+              and update the seen hashmap with the latest index.
+            </li>
+            <li>Return the longest variable.</li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">51</div>
@@ -1256,8 +1277,41 @@
             >Longest Repeating Character Replacement</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">9/19/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <p><strong>Hashmap and sliding window</strong></p>
+            <li>
+              Initializa a frequency hashmap to keep track of the frequency of
+              each char in the string seen so far.
+            </li>
+            <li>
+              Initialize 3 variables to keep track of (1) the start of the
+              sliding window, (2) the longest substring so far, (3) the
+              frequency of the most frequent character
+            </li>
+            <li>
+              Iterate over the string to denote the end of the sliding window,
+              and update the frequency of the hashmap
+            </li>
+            <li>
+              Update the top frequency variable since that might have changed.
+            </li>
+            <li>
+              Calculate the size of the window, and minus the top frequency.
+              That will give the remaining number of characters that are not the
+              most frequent.
+            </li>
+            <li>
+              If the remaining is less than or equals to k, then this is a valid
+              substring. So update the longest variable.
+            </li>
+            <li>
+              Otherwise, advance the left pointer and reduce the frequency of
+              the character that is now out of the sliding window.
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">52</div>
