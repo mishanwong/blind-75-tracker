@@ -23,7 +23,7 @@
     </p>
     <p>Date started: 8/12/2024</p>
     <p>Target completion date: 10/14/2024</p>
-    <p>Current count: 61 out of 76 (80%)</p>
+    <p>Current count: 65 out of 76 (86%)</p>
     <div class="table-container">
       <div class="row header-row">
         <div class="row-item">#</div>
@@ -1129,8 +1129,25 @@
             >Remove Nth Node From End Of List</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">9/29/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <p><strong>Fast and slow pointer, temp head</strong></p>
+            <li>
+              Initialize fast pointer to head, slow pointer to temp node
+              pointing to head.
+            </li>
+            <li>
+              Move fast node n steps ahead, then move fast and slow pointers
+              together.
+            </li>
+            <li>
+              Once fast reached the end of the list, point slow to skip one
+              node.
+            </li>
+            <li>Return temp.next</li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">45</div>
@@ -1511,8 +1528,21 @@
             >Encode and Decode Strings (Leetcode Premium)</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">9/29/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <li>
+              To encode: Prepend each string with the string length and a
+              delimiter.
+            </li>
+            <li>e.g. for ["Hello", "World"], it will be "5#Hello5#World"</li>
+            <li>
+              To decode: Use a while loop with two pointers, first to extract
+              the numeric characters to get the length, and then slice the
+              string by that length to split it into a list of strings.
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">60</div>
@@ -1687,8 +1717,26 @@
             >Serialize and Deserialize Binary Tree</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">9/29/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <li>
+              To serialize: Iterate through the binary tree by level, and append
+              the level in a list.
+            </li>
+            <li>
+              json.dumps the list to return the serialized tree as a string.
+            </li>
+            <li>
+              To deserialize: First json.loads the string back into a list.
+            </li>
+            <li>
+              Then iterate through the list, and use a queue to append left and
+              append right child in a BFS manner.
+            </li>
+            <li>Take care to differentiate a node value of 0 versus None.</li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">66</div>
@@ -1726,8 +1774,30 @@
             >Construct Binary Tree from Preorder and Inorder Traversal</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">9/29/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <li>Preorder traversal: Root -> Left -> Right</li>
+            <li>Inorder traversal: Left -> Root -> Right</li>
+            <li>Get the root node from the front of the preorder list</li>
+            <li>
+              Split the Inorder list into two halves, the left half for values
+              to the left of the root, and the right half for values to the
+              right of the root.
+            </li>
+            <li>
+              Recursively call function on the left_subtree and right_subtree.
+            </li>
+            <li>
+              Assign the return values of left_subtree and right_subtree to root
+              node and return the root.
+            </li>
+            <li>
+              For efficient lookup of the root, create a dictionary to store the
+              position of values in the Inorder list.
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">68</div>
