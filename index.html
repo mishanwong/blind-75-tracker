@@ -23,7 +23,7 @@
     </p>
     <p>Date started: 8/12/2024</p>
     <p>Target completion date: 10/14/2024</p>
-    <p>Current count: 65 out of 75 (87%)</p>
+    <p>Current count: 66 out of 75 (88%)</p>
     <div class="table-container">
       <div class="row header-row">
         <div class="row-item">#</div>
@@ -1863,8 +1863,32 @@
             >Lowest Common Ancestor of BST</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">9/29/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <li>
+              Create a recursive helper function that returns True when the
+              substree contains either p or q but not both.
+            </li>
+            <li>
+              If both left and right subtrees return true, then root is the
+              lowest common ancestor.
+            </li>
+            <li>
+              If one of the subtree returns true, and root.val is either p or q,
+              then root is the lowest common ancestor.
+            </li>
+            <li>
+              If one of the subtree returns true, and root.val is neither p or
+              q, then returns true to caller, because this subtree contains one
+              of the value.
+            </li>
+            <li>
+              Set a global variable to keep track and update the ancestor node,
+              and returns it in the main function.
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">71</div>
@@ -2033,8 +2057,8 @@
         <div class="row-item">7</div>
         <div class="row-item">09-30-2024</div>
         <div class="row-item">65</div>
-        <div class="row-item"></div>
-        <div class="row-item"></div>
+        <div class="row-item">66</div>
+        <div class="row-item">102%</div>
       </div>
 
       <div class="progress-row">
