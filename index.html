@@ -23,7 +23,7 @@
     </p>
     <p>Date started: 8/12/2024</p>
     <p>Target completion date: 10/14/2024</p>
-    <p>Current count: 66 out of 75 (88%)</p>
+    <p>Current count: 68 out of 75 (91%)</p>
     <div class="table-container">
       <div class="row header-row">
         <div class="row-item">#</div>
@@ -887,8 +887,33 @@
             >Graph Valid Tree (Leetcode Premium)</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">10/20/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <li>
+              First, check if the graph is connected. If not, then it is not a
+              valid tree.
+            </li>
+            <li>
+              Then, check if there is a cycle in the graph by keeping track of
+              the parent while traversing using DFS.
+            </li>
+            <li>
+              If a node is in visited, and it is not the parent, then there must
+              be a cycle. The only way we can encounter a visited node and still
+              be a valid tree is if the visited is the parent.
+            </li>
+            <li>
+              A valid tree should:
+
+              <ol>
+                <li>be connected</li>
+                <li>have no cycles</li>
+                <li>number of edges = number of nodes - 1</li>
+              </ol>
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">34</div>
@@ -899,8 +924,22 @@
             Premium)</a
           >
         </div>
-        <div class="row-item"></div>
-        <div class="row-item approach"></div>
+        <div class="row-item">10/20/2024</div>
+        <div class="row-item approach">
+          <ul>
+            <li>Create an adjacency list from the list of edges.</li>
+            <li>
+              For each unvisited node, call a helper function "explore" to mark
+              all connected nodes as visited.
+            </li>
+            <li>Once finish exploring, increase the count by 1.</li>
+            <li>
+              Total number of nodes is given as a parameter as well and might
+              not be connected, hence will not appear in adjacency list. Don't
+              forget to count those isolated component.
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="row">
         <div class="row-item">35</div>
@@ -2065,13 +2104,27 @@
         <div class="row-item">8</div>
         <div class="row-item">10-07-2024</div>
         <div class="row-item">70</div>
+        <div class="row-item">66</div>
+        <div class="row-item">94%</div>
+      </div>
+      <div class="progress-row">
+        <div class="row-item">9</div>
+        <div class="row-item">10-14-2024</div>
+        <div class="row-item">75</div>
+        <div class="row-item">66</div>
+        <div class="row-item">87%</div>
+      </div>
+      <div class="progress-row">
+        <div class="row-item">9</div>
+        <div class="row-item">10-21-2024</div>
+        <div class="row-item">75</div>
         <div class="row-item"></div>
         <div class="row-item"></div>
       </div>
       <div class="progress-row">
         <div class="row-item">9</div>
-        <div class="row-item">10-14-2024</div>
-        <div class="row-item">76</div>
+        <div class="row-item">10-28-2024</div>
+        <div class="row-item">75</div>
         <div class="row-item"></div>
         <div class="row-item"></div>
       </div>
